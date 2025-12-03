@@ -1,8 +1,8 @@
-const AWS = require("aws-sdk");
-
-AWS.config.update({ region: "ap-south-1" });
-
+import AWS from "aws-sdk";
+import dotenv from "dotenv";
+dotenv.config();
+AWS.config.update({ region: "us-east-1" });
 const s3 = new AWS.S3();
-const S3_BUCKET = process.env.bucket_name;
+const S3_BUCKET = process.env.BUCKET_NAME;
 
-module.exports = { s3, S3_BUCKET };
+export { s3, S3_BUCKET };

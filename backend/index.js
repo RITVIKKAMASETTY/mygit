@@ -1,10 +1,10 @@
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
-import { initRepo } from "./controllers/init.js";
+import initRepo from "./controllers/init.js";
 import addFile from "./controllers/add.js";
 import  commitChanges  from "./controllers/commit.js";
 import { pullChanges } from "./controllers/pull.js";
-import { pushChanges } from "./controllers/push.js";
+import pushChanges from "./controllers/push.js";
 import { revertChanges } from "./controllers/revert.js";
 const argv = yargs(hideBin(process.argv))
 .command("init", "Initialize a new repository", {}, (argv) => {initRepo();})
