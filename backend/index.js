@@ -1,7 +1,7 @@
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 import { initRepo } from "./controllers/init.js";
-import { addFile } from "./controllers/add.js";
+import addFile from "./controllers/add.js";
 import { commitChanges } from "./controllers/commit.js";
 import { pullChanges } from "./controllers/pull.js";
 import { pushChanges } from "./controllers/push.js";
